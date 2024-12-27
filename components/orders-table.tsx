@@ -24,7 +24,7 @@ export default function OrdersTable({orders}: OrderProps) {
         <TableRow className="w-full">
           <TableHead className="table-cell">Cliente</TableHead>
           <TableHead className="table-cell">Status</TableHead>
-          <TableHead className="table-cell cursor-pointer justify-end items-center gap-1">
+          <TableHead className="hidden md:table-cell cursor-pointer justify-end items-center gap-1">
             <div className="flex items-center gap-1">
               Data
               <ChevronsUpDown className="w-4" />

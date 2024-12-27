@@ -12,10 +12,15 @@ import {
 } from '@/components/ui/card';
 import axios from 'axios';
 
-const response = await axios.get('https://apis.codante.io/api/orders-api/orders')
-const orders = response.data.data;
+export default async function Component({searchParams, }:{searchParams?: {search?: string}}) {
 
-export default async function Component() {
+  const response = await axios.get('https://apis.codante.io/api/orders-api/orders', {
+    params: {
+      search: searchParams?.search,
+    }
+  })
+  const orders = response.data.data;
+
   return (
     <main className="container px-1 py-10 md:p-10">
       <Card>
